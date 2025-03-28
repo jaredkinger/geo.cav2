@@ -1,0 +1,11 @@
+.elementor-28404 .elementor-element.elementor-element-3d84df72{margin-top:0px;margin-bottom:20px;padding:20px 0px 0px 0px;}.elementor-28404 .elementor-element.elementor-element-577f0b0d > .elementor-widget-container{margin:0px 0px 30px 0px;}.elementor-28404 .elementor-element.elementor-element-63ba2635 > .elementor-widget-container{margin:0px 0px 10px 0px;}.elementor-28404 .elementor-element.elementor-element-39473886 > .elementor-container{min-height:380px;}.elementor-28404 .elementor-element.elementor-element-39473886:not(.elementor-motion-effects-element-type-background), .elementor-28404 .elementor-element.elementor-element-39473886 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://https://jaredkinger.github.io/geo.cav2/wp-content/uploads/2020/04/about-baner.jpg");}.elementor-28404 .elementor-element.elementor-element-39473886{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-28404 .elementor-element.elementor-element-39473886 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-28404 .elementor-element.elementor-element-5b90e73a{margin-top:0px;margin-bottom:20px;}.elementor-28404 .elementor-element.elementor-element-547a4589{--grid-column-gap:20px;--grid-row-gap:20px;}@media(max-width:1024px){.elementor-28404 .elementor-element.elementor-element-577f0b0d > .elementor-widget-container{margin:0px 0px 10px 0px;}.elementor-28404 .elementor-element.elementor-element-63ba2635 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-28404 .elementor-element.elementor-element-39473886 > .elementor-container{min-height:300px;}}@media(max-width:767px){.elementor-28404 .elementor-element.elementor-element-577f0b0d > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-28404 .elementor-element.elementor-element-39473886 > .elementor-container{min-height:220px;}}/* Start custom CSS for section, class: .elementor-element-5b90e73a */@media(max-width: 1279px) {
+    .elementor-28404 .elementor-element.elementor-element-5b90e73a .elementor-container {
+        max-width: 960px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .elementor-28404 .elementor-element.elementor-element-5b90e73a .elementor-container {
+        max-width: 720px;
+    }
+}/* End custom CSS */
