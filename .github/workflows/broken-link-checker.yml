@@ -1,0 +1,26 @@
+name: Daily Link Check with Lychee
+on:
+  schedule:
+    - cron: '30 18 * * *'  # 12:30 PM EDT
+  workflow_dispatch:
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+    
+      - name: Run lychee link checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --format markdown
+          output: report.md
+      
+      - name: Log broken link report
+        uses: actions/upload-artifact@v4 # Use the latest version
+        with:
+          name: broken-link-report
+          path: report.md
+      
