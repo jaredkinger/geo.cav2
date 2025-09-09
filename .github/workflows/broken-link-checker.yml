@@ -19,9 +19,3 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: false
-
-      - name: Log broken link report
-        uses: actions/upload-artifact@v4 # Use the latest version
-        with:
-          name: broken-link-report
-          path: ./lychee/out.md
