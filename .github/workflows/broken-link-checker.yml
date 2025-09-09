@@ -1,26 +1,29 @@
-name: Daily Link Check with Lychee
+name: Links
+
 on:
-  schedule:
-    - cron: '30 18 * * *'  # 12:30 PM EDT
+  repository_dispatch:
   workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"
+
 jobs:
-  link-check:
+  linkChecker:
     runs-on: ubuntu-latest
-    
+    permissions:
+      issues: write # required for peter-evans/create-issue-from-file
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-    
-      - name: Run lychee link checker
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --format markdown
-          output: report.md
-      
-      - name: Log broken link report
-        uses: actions/upload-artifact@v4 # Use the latest version
+          fail: false
+
+      - name: Create Issue From File
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
         with:
-          name: broken-link-report
-          path: report.md
-      
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue
